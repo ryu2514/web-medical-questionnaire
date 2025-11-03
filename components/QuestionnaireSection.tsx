@@ -23,6 +23,18 @@ export const QuestionnaireSection: React.FC<QuestionnaireSectionProps> = ({ sect
             </h2>
             <div className="space-y-6">
                 {section.questions.map((q) => {
+                    // Check conditional display
+                    if (q.conditionalOn && q.conditionalValue) {
+                        const conditionalValue = formData[q.conditionalOn];
+                        const shouldShow = Array.isArray(conditionalValue)
+                            ? conditionalValue.includes(q.conditionalValue)
+                            : conditionalValue === q.conditionalValue;
+
+                        if (!shouldShow) {
+                            return null;
+                        }
+                    }
+
                     const value = formData[q.id];
                     switch (q.type) {
                         case 'text':

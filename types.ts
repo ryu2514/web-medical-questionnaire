@@ -8,6 +8,9 @@ export interface Question {
     options?: string[];
     placeholder?: string;
     notes?: string;
+    hasOtherInput?: boolean;
+    conditionalOn?: string;
+    conditionalValue?: string;
 }
 
 export interface Section {
