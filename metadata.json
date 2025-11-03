@@ -1,0 +1,5 @@
+{
+  "name": "Web Medical Questionnaire",
+  "description": "A comprehensive, web-based medical questionnaire designed for patients to fill out before their consultation. It captures detailed information about their symptoms, lifestyle, and medical history to assist therapists in providing accurate assessments and personalized treatment plans.",
+  "requestFramePermissions": []
+}
