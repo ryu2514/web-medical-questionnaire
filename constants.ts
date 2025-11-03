@@ -5,6 +5,7 @@ export const questionnaireData: Section[] = [
         level: '【レベル0】',
         title: '基本情報',
         questions: [
+            { id: 'patientId', level: '0', item: '患者ID', text: '', type: 'text', placeholder: '例：12345', notes: '保存・検索用のID（数字）' },
             { id: 'name', level: '0', item: 'お名前', text: '', type: 'text', placeholder: '山田太郎' },
             { id: 'age', level: '0', item: '年齢', text: '', type: 'text', placeholder: '65' , notes: "歳" },
             { id: 'gender', level: '0', item: '性別', text: '', type: 'radio', options: ['男性', '女性', 'その他'] },
@@ -71,14 +72,6 @@ export const questionnaireData: Section[] = [
             { id: 'medicationDetails', level: '6', item: 'Q14-補足', text: 'どのようなお薬を飲んでいますか？', type: 'textarea', placeholder: '例：血圧の薬、痛み止め、糖尿病の薬など（わかる範囲で）', conditionalOn: 'currentMedications', conditionalValue: 'あり（お薬手帳をお持ちください）' },
             { id: 'pastSurgeries', level: '6', item: 'Q15', text: '過去に大きな手術やケガをしたことはありますか？', type: 'radio', options: ['あり', 'なし'], notes: 'ありの場合は内容を記入' },
             { id: 'pastSurgeriesDetails', level: '6', item: '', text: '', type: 'text', placeholder: '例：右膝半月板損傷の手術・10年前', conditionalOn: 'pastSurgeries', conditionalValue: 'あり' },
-        ],
-    },
-    {
-        level: '【レベル7】',
-        title: 'その他',
-        questions: [
-            { id: 'concerns', level: '7', item: 'Q17', text: '治療を受けるにあたって、心配なことや不安なことはありますか？', type: 'textarea', placeholder: '例：痛い治療は避けたい、仕事を休めないので短期間で治したい' },
-            { id: 'otherInfo', level: '7', item: 'Q18', text: 'その他、私たちに伝えておきたいことがあれば自由にお書きください', type: 'textarea', placeholder: '例：運動が苦手なので心配ですが、頑張りたいです' },
         ],
     },
 ];
